@@ -7,6 +7,7 @@ module.exports = function defineUser(sequelize, DataTypes) {
 
     username: {
       type: DataTypes.STRING,
+      unique: true,
       allowNull: false,
     },
 
@@ -17,6 +18,7 @@ module.exports = function defineUser(sequelize, DataTypes) {
 
     email: {
       type: DataTypes.STRING,
+      unique: true,
       allowNull: false,
       validate: {
         isEmail: true,
